@@ -1,0 +1,71 @@
+#include "BluetoothSerial.h" 
+ 
+BluetoothSerial SerialBT; 
+ 
+int received;// received value will be stored in this variable 
+ 
+char receivedChar;// received value will be stored as CHAR in this variable 
+ 
+const char turnON ='LED on'; 
+ 
+const char turnOFF ='LED off'; 
+ 
+const int LEDpin = 25;// 2;// 25; 
+ 
+void setup()  
+{ 
+Serial.begin(115200);e 
+ 
+SerialBT.begin("Srushti Bhise"); 
+ 
+Serial.println("The device started, now you can pair it with bluetooth!"); 
+ 
+Serial.println("To turn ON send: LED on");//print on serial monitor   
+ 
+Serial.println("To turn OFF send: LED off"); //print on serial monitor  
+35 
+ 
+ 
+ 
+pinMode(LEDpin, OUTPUT); 
+ 
+digitalWrite(LEDpin,LOW); 
+} 
+ 
+void loop()  
+{ 
+   receivedChar =(char)SerialBT.read(); 
+ 
+      if (SerialBT.available())  
+        { 
+            SerialBT.print("Received:");// write on BT app 
+ 
+            SerialBT.println(receivedChar);// write on BT app  
+      
+            Serial.print ("Received:");//print on serial monitor 
+ 
+            Serial.println(receivedChar);//print on serial monitor    
+  
+               if(receivedChar == turnON) 
+                    { 
+                        SerialBT.println("LED ON:");// write on BT app 
+ 
+                        Serial.println("LED ON:");//write on serial monitor 
+ 
+                        digitalWrite(LEDpin, HIGH);// turn the LED ON 
+                    } 
+36 
+ 
+                     
+                        if(receivedChar == turnOFF) 
+                   
+  { 
+                        SerialBT.println("LED OFF:");// write on BT app 
+ 
+                        Serial.println("LED OFF:");//write on serial monitor 
+ 
+                        digitalWrite(LEDpin, LOW);// turn the LED off  
+                    }     
+       } 
+  delay(20); 
+} 
