@@ -23,7 +23,7 @@ Serial.println("The device started, now you can pair it with bluetooth!");
 Serial.println("To turn ON send: LED on");//print on serial monitor   
  
 Serial.println("To turn OFF send: LED off"); //print on serial monitor  
-35 
+
  
  
  
@@ -54,7 +54,6 @@ void loop()
  
                         digitalWrite(LEDpin, HIGH);// turn the LED ON 
                     } 
-36 
  
                      
                         if(receivedChar == turnOFF) 
