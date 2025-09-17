@@ -1,6 +1,4 @@
-# Smart-Irrigation-System
-
-# 🌱 IoT Based Agriculture System Device (Irrigation Pump)
+# 🌱  Smart-Irrigation-System
 
 This project automates irrigation by combining **soil moisture monitoring** and **voice control**.  
 Farmers can let the pump work automatically based on soil conditions, or override it with voice commands via Bluetooth.
