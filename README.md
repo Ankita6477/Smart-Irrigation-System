@@ -1,7 +1,8 @@
 # 🌱  Smart-Irrigation-System
 
-This project automates irrigation by combining **soil moisture monitoring** and **voice control**.  
-Farmers can let the pump work automatically based on soil conditions, or override it with voice commands via Bluetooth.
+This project is designed to automate agricultural irrigation pumps using soil moisture sensing and Bluetooth voice control. It addresses the challenges faced by farmers in remote areas where cellular networks are unavailable and manual operation of pumps is difficult due to bad weather, night-time risks, or rough terrain.
+
+The system ensures that crops get adequate water supply without wastage and allows farmers to override automation manually using their smartphones.
 
 ## 🔧 Modes of Operation
 1. **Automatic Mode (Soil Moisture Sensor)**
